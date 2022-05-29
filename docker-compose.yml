@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  deploy_api:
+    volumes:
+      - ./:/app
+    network_mode: "host"
+    image: "api"
+    command: "node index.js"
+    tty: true
+    stdin_open: true
